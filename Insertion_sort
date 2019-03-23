@@ -1,0 +1,25 @@
+function insertionSort(items)
+{
+    for(i = 0;i< items.length;i++)//this line to iterate throught the elements
+    {
+        var value = items[i];
+
+        for(j = i-1;j>-1 && items[j] > value;j--)//here we check if the new item is greater than the already inserted values
+        {
+            items[j+1] = items[j];
+        }
+        items[j+1] = value;
+    }
+return items;
+}
+
+
+console.log(insertionSort([2,3,1,4]));
+
+Time Complexity: O(n*2)
+
+Auxiliary Space: O(1)
+
+Boundary Cases: Insertion sort takes maximum time to sort if elements are sorted in reverse order. And it takes minimum time (Order of n) when elements are already sorted.
+
+
